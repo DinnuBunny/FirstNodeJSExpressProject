@@ -1,3 +1,5 @@
+import * as dotenv from 'dotenv'
+dotenv.config()
 import express from 'express'
 // import addDays from "date-fns/addDays";
 
@@ -10,11 +12,12 @@ app.get('/', (req, res) => {
   res.send("Hello World");
 });
 
+
 app.get('/login', (req, res) => {
   res.send("Login Page");
 });
 
-const port = 3005;
+const port = process.env.PORT || 3005;
 app.listen(port, () => {
   console.log(`Server is running on port http://localhost:${port}/`);
 });
