@@ -1,15 +1,16 @@
 import * as dotenv from 'dotenv'
 dotenv.config()
 import express from 'express'
-// import addDays from "date-fns/addDays";
+import {format} from 'date-fns'
 
-// const result = addDays(new Date(2000, 0, 20))
-// console.log(result);
+let  result = new Date()
+result = format(result, "PPP h:m:ss")
+console.log(result);
 
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send("Hello World");
+  res.send(`${result}`);
 });
 
 
