@@ -4,11 +4,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.mjs",
+    "start": "nodemon app.mjs",
     "dev": "nodemon app.mjs"
   },
   "keywords": [],
-  "author": "",
+  "author": "DinnuBunny",
   "license": "ISC",
   "engines": {
     "node": ">=16.0.0"
