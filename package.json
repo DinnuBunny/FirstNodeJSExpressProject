@@ -10,9 +10,6 @@
   "keywords": [],
   "author": "DinnuBunny",
   "license": "ISC",
-  "engines": {
-    "node": ">=16.0.0"
-  },
   "dependencies": {
     "bcrypt": "^5.1.1",
     "date-fns": "^2.30.0",
