@@ -3,9 +3,7 @@ dotenv.config()
 import express from 'express'
 import cors from 'cors'
 import {format} from 'date-fns'
-
-let  result = new Date()
-result = format(result, "PPP h:m:ss")
+const app = express();
 
 app.use(cors({
   origin : 'http://localhost:3004',
@@ -14,7 +12,9 @@ app.use(cors({
   }
 ))
 
-const app = express();
+let  result = new Date()
+result = format(result, "PPP h:m:ss")
+
 
 app.get('/', (req, res) => {
   res.send({date : result});
