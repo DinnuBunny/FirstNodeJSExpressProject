@@ -10,7 +10,7 @@ console.log(result);
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send(`${result}`);
+  res.send({date : result});
 });
 
 
