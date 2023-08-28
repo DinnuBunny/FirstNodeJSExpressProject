@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.mjs",
-    "dev": "nodemon app.mjs"
+    "start": "nodemon app.js",
+    "dev": "nodemon app.js"
   },
   "engines": {
     "node": "18.16.0"

@@ -3,3 +3,47 @@ GET http://localhost:3005/
 ###
 
 GET http://localhost:3005/login
+
+###
+
+# API 1
+GET http://localhost:3005/todos/
+
+###
+
+# API 2
+GET http://localhost:3005/todos/7/
+
+###
+ 
+# API 3
+GET http://localhost:3005/agenda/?date=1997-1-19
+
+###
+
+#API 4
+POST http://localhost:3005/todos/
+Content-Type: application/json
+
+{
+  "id": 7,
+  "todo": "Reduce Weight",
+  "priority": "MEDIUM",
+  "status": "IN PROGRESS",
+  "category": "HOME",
+  "dueDate": "2023 09 29"
+}
+
+###
+#API 5
+PUT http://localhost:3005/todos/24/
+Content-Type: application/json
+
+{
+  "dueDate": "1997-1-19"
+}
+
+
+###
+#API 6
+DELETE http://localhost:3005/todos/6/
