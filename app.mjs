@@ -6,9 +6,10 @@ import {format} from 'date-fns'
 const app = express();
 
 app.use(cors({
-  origin : 'http://localhost:3004',
+  origin : '*',
   methods: [ "GET", "POST", "PUT", "DELETE"],
-  credentials: true
+  credentials: true,
+  optionsSuccessStatus: 204,
   }
 ))
 
