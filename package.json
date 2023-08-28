@@ -7,6 +7,9 @@
     "start": "nodemon app.mjs",
     "dev": "nodemon app.mjs"
   },
+  "engines": {
+    "node": "18.16.0"
+  },
   "keywords": [],
   "author": "DinnuBunny",
   "license": "ISC",
