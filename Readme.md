@@ -13,54 +13,26 @@ in `package.json`
 ![](https://img.shields.io/twitter/follow/Dinnubunny?link=https%3A%2F%2Ftwitter.com%2FDinnubunny)
 
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
-
-![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/github/tag/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
-
-### FlowChart
-
-```
-flow
-st=>start: Login
-op=>operation: Login operation
-cond=>condition: Successful Yes or No?
-e=>end: To admin
-
-st->op->cond
-cond(yes)->e
-cond(no)->op
-
-```
-
-
-| Plugin | README |
-| ------ | ------ |
-| Dropbox | [plugins/dropbox/README.md][PlDb] |
-| GitHub | [plugins/github/README.md][PlGh] |
-| Google Drive | [plugins/googledrive/README.md][PlGd] |
-| OneDrive | [plugins/onedrive/README.md][PlOd] |
-| Medium | [plugins/medium/README.md][PlMe] |
-| Google Analytics | [plugins/googleanalytics/README.md][PlGa] |
-
   If we want to run the project 
   RUN with Below Commands
-  > npm start
-    or
-  > npm run dev
+  > ` npm start`
+    ***||***
+  `npm run dev`
 
 
 Wrote APIs to perform operations on the table `todo`, with the following columns,
 
 **Todo Table**
 
-| Column   | Type    | Not Null | Primiary Key |
-| -------- | ------- | -------- | ------------ |
-| id       | INTEGER |    1     |       1      |
-| todo     | TEXT    |    0     |       0      |
-| category | TEXT    |    0     |       0      |
-| priority | TEXT    |    0     |       0      |
-| status   | TEXT    |    0     |       0      |
-| due_date | DATE    |    0     |       0      |
+| Column       | Type    | Not Null | Primiary Key |
+| --------     | ------- | -------- | ------------ |
+| id           | INTEGER |    1     |       1      |
+| todo         | TEXT    |    0     |       0      |
+| category     | TEXT    |    0     |       0      |
+| priority     | TEXT    |    0     |       0      |
+| status       | TEXT    |    0     |       0      |
+| created_date | DATE    |    0     |       0      |
+| due_date     | DATE    |    0     |       0      |
 
 <MultiLineNote>
   
