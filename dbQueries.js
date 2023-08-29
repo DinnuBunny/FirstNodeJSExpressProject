@@ -35,7 +35,7 @@ exports.getTodoByFilterQuery = (queryParamObject) => {
   const clause = whereClauseStates(queryParamObject);
   const query = `
   SELECT 
-    id, todo, priority, status, category, due_date as dueDate
+    id, todo, priority, status, category, created_date as createdDate, due_date as dueDate
   FROM
     todo
   ${clause}
@@ -49,7 +49,7 @@ exports.getTodoByFilterQuery = (queryParamObject) => {
 exports.getTodoQuery = (todoId) => {
   return `
     SELECT 
-       id, todo, priority, status, category, due_date as dueDate
+       id, todo, priority, status, category, created_date as createdDate, due_date as dueDate
     FROM
         todo
     WHERE
@@ -59,18 +59,20 @@ exports.getTodoQuery = (todoId) => {
 
 // API 4
 exports.addTodoQuery = (todoObject) => {
-  let { id, todo, priority, status, category, dueDate } = todoObject;
+  let { id, todo, priority, status, category, dueDate, createdDate} = todoObject;
   dueDate = dateFormatter(dueDate);
+  createdDate = dateFormatter(createdDate);
   return `
     INSERT INTO todo
-        (id, todo, priority, status, category, due_date)
+        (id, todo, priority, status, category, due_date, created_date)
     VALUES(
         ${id},
         '${todo}',
         '${priority}',
         '${status}',
         '${category}',
-        '${dueDate}'
+        '${dueDate}',
+        '${createdDate}'
         );
     `;
 };
@@ -83,6 +85,9 @@ function setClause(setObject) {
       if (key === "dueDate") {
         const dueDate = dateFormatter(setObject[key]);
         clause += ` due_date = '${dueDate}',`;
+      } else if(key === "createdDate"){
+        const createdDate = dateFormatter(setObject[key]);
+        clause += ` created_date = '${createdDate}',`;
       } else {
         clause += ` ${key} = "${setObject[key]}",`;
       }

@@ -31,7 +31,8 @@ Content-Type: application/json
   "priority": "MEDIUM",
   "status": "IN PROGRESS",
   "category": "HOME",
-  "dueDate": "2023 09 29"
+  "dueDate": "2023 09 29",
+  "createdDate" : "2023 09 10"
 }
 
 ###
